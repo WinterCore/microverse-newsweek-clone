@@ -1,0 +1,268 @@
+:root {
+  --main-color: #f72210;
+  --heading-color: rgba(3, 3, 3, 0.4);
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  outline: 0;
+  line-height: 14px;
+  padding: 6px 10px;
+}
+
+button:focus { outline: 0; }
+
+button.w-arrow::after {
+  content: "";
+  width: 8px;
+  height: 14px;
+  display: inline-block;
+  background-image: url(../images/arrow-right.svg);
+  margin-left: 10px;
+}
+
+.page-container {
+  max-width: 1310px;
+  margin: 0 auto;
+}
+
+.top-header {
+  color: #fff;
+  height: 95px;
+  padding: 18px 10px 15px;
+}
+
+.top-header .logo {
+  fill: #fff;
+  width: 396px;
+}
+
+.top-header .header-weather {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.top-header .header-weather .arrow {
+  width: 7px;
+}
+
+.weather-icon {
+  height: 24px;
+}
+
+.bottom-header {
+  position: relative;
+}
+
+.bottom-header nav {
+  padding: 15px 160px 15px 0;
+  font-weight: bold;
+  font-size: 19px;
+  border-bottom: 2px solid #f4f5f6;
+}
+
+.bottom-header nav li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.bottom-header nav li + li {
+  border-left: 1px solid #d9d9d9;
+}
+
+.bottom-header nav::before {
+  content: "";
+  top: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  width: 66px;
+  border-left: 12px solid #fff;
+  border-top: 13px solid var(--main-color);
+}
+
+.bottom-header .header-search {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  height: 58px;
+  z-index: 10;
+  width: 80px;
+}
+
+.bottom-header .header-search input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  display: block;
+  text-indent: 0;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.bottom-header .header-search label {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background: url(../images/icon-search-glass.svg) center no-repeat;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger span {
+  margin: 4px 0;
+}
+
+.hamburger.active::before {
+  position: absolute;
+  top: calc(50% - 2px);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.hamburger.active::after {
+  position: absolute;
+  top: calc(50% - 2px);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.hamburger.active span {
+  display: none;
+}
+
+@media (min-width: 993px) {
+  .bottom-header .header-search:focus-within {
+    width: calc(100% - 70px);
+    transition: width 300ms ease-in-out;
+  }
+
+  .bottom-header .header-search input:focus {
+    text-indent: 15px;
+    transition: text-indent 300ms ease-in-out;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-header {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .top-header .logo {
+    width: 132px;
+  }
+
+  .bottom-header {
+    position: absolute;
+    right: -220px;
+    padding: 10px 0;
+    width: 220px;
+    height: calc(100vh - 50px);
+    top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) -2px 0 2px;
+    transition: right 300ms ease-in-out;
+  }
+
+  .bottom-header.shown {
+    right: 0;
+  }
+  .bottom-header nav::before { display: none; }
+
+  .bottom-header .header-search {
+    position: static;
+    margin-left: 15px;
+    margin-right: 10px;
+    height: auto;
+  }
+
+  .bottom-header .header-search input {
+    width: auto;
+  }
+
+  .bottom-header nav {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .bottom-header nav a {
+    text-align: left;
+    display: block;
+    padding: 5px 15px;
+    position: relative;
+  }
+
+  .bottom-header nav a::before {
+    content: "";
+    -webkit-mask-image: url(../images/arrow-right.svg);
+    mask-image: url(../images/arrow-right.svg);
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    height: 14px;
+    width: 8px;
+    right: 15px;
+    top: calc(50% - 7px);
+  }
+
+  .bottom-header nav a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .bottom-header nav a:hover::before {
+    background: var(--main-color);
+  }
+}
+
+@media (max-width: 576px) {
+  .d-xs-none { display: none !important; }
+}
+
+/* Helper classes */
+
+.bg-main { background-color: var(--main-color); }
+.text-main { color: var(--main-color); }
