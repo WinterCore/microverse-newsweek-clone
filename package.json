@@ -1,0 +1,36 @@
+{
+  "name": "newsweek-clone",
+  "version": "0.1.0",
+  "description": "Newsweek home page clone",
+  "main": "index.js",
+  "scripts": {
+    "lintcss": "stylelint assets/css",
+    "lintcss:fix": "stylelint --fix assets/css",
+    "lintjs": "eslint .",
+    "validate-html": "html-validator --file index.html",
+    "lint": "npm run validate-html && npm run lintcss && npm run lintjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinterCore/microverse-newsweek-clone.git"
+  },
+  "keywords": [
+    "newsweek",
+    "clone",
+    "html/css"
+  ],
+  "author": "WinterCore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WinterCore/microverse-newsweek-clone/issues"
+  },
+  "homepage": "https://github.com/WinterCore/microverse-newsweek-clone#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "html-validator-cli": "^7.0.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}
