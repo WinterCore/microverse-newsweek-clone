@@ -7,6 +7,8 @@
   --washed-out-color: #555;
   --separator-color: #ddd;
   --washed-out-background: #f4f5f6;
+  --light-gray: #d9d9d9;
+  --dark-gray: #666;
 }
 
 body {
@@ -93,6 +95,42 @@ a.button.reversed::after {
   padding: 18px 10px 15px;
 }
 
+footer .logo {
+  width: 236px;
+  fill: var(--main-color);
+}
+
+footer nav li {
+  color: var(--dark-gray);
+}
+
+h3 a:hover,
+h5 a:hover { text-decoration: underline var(--main-color); }
+
+h4 a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #000;
+}
+
+footer .social-links a + a {
+  margin-left: 12px;
+}
+
+.sub h5 a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+footer li:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid var(--light-gray);
+}
+
 .top-header .logo {
   fill: #fff;
   width: 396px;
@@ -119,7 +157,7 @@ a.button.reversed::after {
   text-align: center;
 }
 
-.bottom-header nav li + li { border-left: 1px solid #d9d9d9; }
+.bottom-header nav li + li { border-left: 1px solid var(--light-gray); }
 
 .bottom-header nav::before {
   content: "";
@@ -204,7 +242,8 @@ a.button.reversed::after {
 
 .hamburger.active span { display: none; }
 
-main > .main-content { padding: 20px 30px; }
+main > .main-content,
+footer { padding: 20px 30px; }
 
 .articles-section-heading {
   color: var(--heading-color);
@@ -224,13 +263,32 @@ main > .main-content { padding: 20px 30px; }
   font-weight: bold;
 }
 
-h3 a:hover,
-h5 a:hover { text-decoration: underline var(--main-color); }
+footer {
+  background-color: #fff;
+}
 
-h4 a:hover,
-.sub h5 a:hover {
-  color: var(--main-color);
-  text-decoration: none;
+footer .footer-top {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+footer .copyright {
+  color: var(--dark-gray);
+  font-size: 12px;
+  line-height: 12px;
+}
+
+footer .social-links {
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--dark-gray);
+}
+
+footer .social-links a:hover {
+  color: #0077b5;
+}
+
+footer ul {
+  margin: 0;
 }
 
 .magazine h5 {
@@ -295,8 +353,8 @@ h4 a:hover,
   left: 50%;
   top: 50%;
   height: 100%;
-  max-width: max-content;
   width: auto;
+  max-width: none;
 }
 
 .media,
@@ -329,8 +387,8 @@ h4 a:hover,
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .debate-item .debate-author img {
@@ -395,7 +453,8 @@ h4 a:hover,
   padding: 3px 7px;
 }
 
-.magazine .article {
+.magazine .article,
+.features-ad {
   margin: 15px 0;
 }
 
