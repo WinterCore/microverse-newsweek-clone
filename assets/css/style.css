@@ -369,6 +369,7 @@ footer ul {
 }
 
 .debate-item { border-top: 4px solid var(--main-color); }
+.debate-item.second { border-top: 4px solid #1c87fb; }
 
 .article-link .article-link-image {
   width: 95px;

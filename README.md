@@ -1,4 +1,4 @@
-# Apple 2014 Homepage Clone v0.1.0
+# Newsweek Clone
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,7 +10,7 @@ This is just a clone of the homepage of the [newsweek website](https://www.newsw
 
 ## Live Demo
 
-[Live Demo Link](https://wintercore.github.io/microverse-newsweek-clone)
+[Live Demo Link](https://raw.githack.com/WinterCore/microverse-newsweek-clone/develop/index.html)
 
 
 ## Getting Started
