@@ -10,7 +10,7 @@ This is just a clone of the homepage of the [newsweek website](https://www.newsw
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/WinterCore/microverse-newsweek-clone/develop/index.html)
+[Live Demo Link](https://wintercore.github.io/microverse-newsweek-clone/)
 
 
 ## Getting Started
